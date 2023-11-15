@@ -1,0 +1,109 @@
+:root {
+    --color-primary: rgb(39, 39, 39);
+    --color-primary-light: rgb(55, 55, 55);
+}
+
+html {
+    height: 100vh;
+    font-family: 'Fira Code', monospace;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+.container {
+    width: min(65em, 100%);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 1.5rem;
+}
+
+.game__info {
+    width: min(40em, 100%);
+}
+
+.game__info-title {
+    font-size: 1.35rem;
+    color: #fff;
+    letter-spacing: 0.5rem;
+}
+
+.game__info-text {
+    color: #fff;
+}
+
+.btn {
+    color: var(--color-primary);
+    background-color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    font-family: inherit;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+.item-group {
+    background: var(--color-primary-light);
+    border-radius: 1rem;
+    width: min(40em, 100%);
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.item {
+    background-color: var(--color-primary);
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width: 30rem) {
+    .game {
+        gap: 5rem;
+    }
+
+    .game__info-title {
+        font-size: 1.875rem;
+    }
+
+    .item-group {
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+}
+
+@media only screen and (min-width: 60rem) {
+    .game {
+        flex-direction: row;
+        gap: 10rem;
+    }
+
+    .game__info-title {
+        font-size: 2.225rem;
+    }
+
+}
